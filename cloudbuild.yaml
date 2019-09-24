@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/cloud-run-cloud-native-aarhus:$SHORT_SHA', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/$PROJECT_ID/cloud-run-cloud-native-aarhus:$SHORT_SHA']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'cloud-run-cloud-native-aarhus', '--image=gcr.io/$PROJECT_ID/cloud-run-cloud-native-aarhus:$SHORT_SHA', '--region=europe-west1', '--platform=managed', '--allow-unauthenticated', '--concurrency=10']

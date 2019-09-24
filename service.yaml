@@ -1,0 +1,30 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  annotations:
+    client.knative.dev/user-image: gcr.io/cloud-native-aarhus-cloud-run/cloud-run-cloud-native-aarhus:845c6872
+    run.googleapis.com/client-name: gcloud
+    run.googleapis.com/client-version: 257.0.0
+    serving.knative.dev/creator: 806337517016@cloudbuild.gserviceaccount.com
+    serving.knative.dev/lastModifier: 806337517016@cloudbuild.gserviceaccount.com
+  creationTimestamp: '2019-09-24T12:23:14.893673Z'
+  generation: 5
+  labels:
+    cloud.googleapis.com/location: europe-west1
+  name: cloud-run-cloud-native-aarhus
+  namespace: cloud-native-aarhus-cloud-run
+  resourceVersion: AAWTTMKnowg
+  selfLink: /apis/serving.knative.dev/v1alpha1/namespaces/cloud-native-aarhus-cloud-run/services/cloud-run-cloud-native-aarhus
+  uid: 40e296fa-ea0d-4c4f-bda2-206ea5dc7180
+spec:
+  template:
+    metadata:
+      labels:
+        client.knative.dev/nonce: xeazmftnek
+    spec:
+      containerConcurrency: 10
+      containers:
+      - image: gcr.io/cloud-native-aarhus-cloud-run/cloud-run-cloud-native-aarhus:845c6872
+  traffic:
+  - latestRevision: true
+    percent: 100

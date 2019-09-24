@@ -1,0 +1,56 @@
+$ ab -c 200 -n 100000 https://cloud-run-cloud-native-aarhus-7letzwreda-ew.a.run.app/
+This is ApacheBench, Version 2.3 <$Revision: 1826891 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cloud-run-cloud-native-aarhus-7letzwreda-ew.a.run.app (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        Google
+Server Hostname:        cloud-run-cloud-native-aarhus-7letzwreda-ew.a.run.app
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-CHACHA20-POLY1305,2048,256
+TLS Server Name:        cloud-run-cloud-native-aarhus-7letzwreda-ew.a.run.app
+
+Document Path:          /
+Document Length:        381 bytes
+
+Concurrency Level:      200
+Time taken for tests:   421.003 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      61203045 bytes
+HTML transferred:       38100000 bytes
+Requests per second:    237.53 [#/sec] (mean)
+Time per request:       842.006 [ms] (mean)
+Time per request:       4.210 [ms] (mean, across all concurrent requests)
+Transfer rate:          141.97 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       64  505 165.8    509    2888
+Processing:    48  332 192.8    320    5408
+Waiting:       48  243 185.9    205    5403
+Total:        136  837 249.4    839    5973
+
+Percentage of the requests served within a certain time (ms)
+  50%    839
+  66%    882
+  75%    937
+  80%    969
+  90%   1053
+  95%   1155
+  98%   1276
+  99%   1434
+ 100%   5973 (longest request)
